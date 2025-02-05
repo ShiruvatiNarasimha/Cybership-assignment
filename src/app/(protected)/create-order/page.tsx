@@ -19,9 +19,30 @@ type FormInput = {
 
 const CreatePage = () => {
   const { register, handleSubmit, reset } = useForm<FormInput>();
+  const createOrder = api.order.createOrder.useMutation();
+  const router = useRouter();
+  const refetch = useRefetch();
 
   function onSubmit(data: FormInput) {
-    window.alert(JSON.stringify(data, null, 2));
+    createOrder.mutate(
+      {
+        name: data.orderName,
+        address: data.address,
+        itmes: data.items,
+        shippingMethod: data.shippingMethod,
+      },
+      {
+        onSuccess: () => {
+          toast.success("Order Created Successfully");
+          refetch();
+          reset();
+          router.push("/dashboard");
+        },
+        onError: () => {
+          toast.error("Failed to create Order");
+        },
+      },
+    );
     return true;
   }
 
@@ -29,7 +50,7 @@ const CreatePage = () => {
     <Card>
       <div className="flex h-screen items-center justify-center bg-gray-100">
         <div className="w-full max-w-md rounded-2xl bg-white p-6 shadow-lg">
-          <img src="/undraw_github.svg" className="h-15 mx-auto w-auto" />
+          <img src="/undraw_cybership.svg" className="h-15 mx-auto w-auto" />
           <h1 className="mt-4 text-center text-2xl font-semibold text-gray-900">
             Supercharging Warehouse Productivity
           </h1>
@@ -65,6 +86,7 @@ const CreatePage = () => {
             />
             <Button
               type="submit"
+              disabled={createOrder.isPending}
               className="w-full rounded-lg bg-blue-600 py-2 text-white hover:bg-blue-700 disabled:opacity-50"
             >
               Create Project
