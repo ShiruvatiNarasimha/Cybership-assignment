@@ -27,4 +27,16 @@ export const orderRouter = createTRPCRouter({
       });
       return order;
     }),
+  getOrders: protectedProcedure.query(async ({ ctx }) => {
+    return await ctx.db.order.findMany({
+      where: {
+        userToOrders: {
+          some: {
+            userId: ctx.user.userId!,
+          },
+        },
+        deletedAt: null,
+      },
+    });
+  }),
 });
