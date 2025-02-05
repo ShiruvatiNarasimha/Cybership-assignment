@@ -48,7 +48,12 @@ export function AppSidebar() {
       {/* Sidebar Header */}
       <SidebarHeader>
         <div className="flex items-center gap-3 px-2">
-          <Image src="/undraw_github.svg" alt="logo" width={40} height={40} />
+          <Image
+            src="/undraw_cybership.svg"
+            alt="logo"
+            width={60}
+            height={60}
+          />
           {open && (
             <h1 className="text-xl font-semibold text-primary/90">Cybership</h1>
           )}
