@@ -18,5 +18,42 @@ model User {
     firstName       String?
     lastName        String?
     emailAddress    String         @unique
+    userToOrders   UserToOrder[]
 
+
+}
+
+
+model Order {
+  id              String             @id @default(cuid())
+  name            String
+  address         String
+  items           String
+  shippingMethod   String
+  fulfillment     FulfillmentStatus  @default(PENDING)
+  createdAt       DateTime           @default(now())
+  updateAt        DateTime           @updatedAt
+  deletedAt       DateTime?
+  userToOrders    UserToOrder[]
+}
+
+
+model UserToOrder {
+    id             String    @id @default(cuid())
+    user           User @relation(fields: [userId], references: [id])
+    userId         String
+    order          Order @relation(fields: [orderId],references: [id])
+    orderId        String
+    createdAt      DateTime     @default(now())
+    updatedAt      DateTime     @updatedAt
+    @@unique([userId, orderId])
+}
+
+
+
+enum FulfillmentStatus {
+  PENDING
+  SHIPPED
+  DELIVERED
+  CANCELED
 }
