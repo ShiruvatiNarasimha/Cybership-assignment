@@ -2,6 +2,7 @@ import { SidebarProvider } from "@/components/ui/sidebar";
 import { UserButton } from "@clerk/nextjs";
 import React from "react";
 import { AppSidebar } from "./app-sidebar";
+import Search from "@/components/global";
 
 type Props = {
   children: React.ReactNode;
@@ -13,6 +14,7 @@ const SidebarLayout = ({ children }: Props) => {
       <AppSidebar />
       <main className="m-2 w-full">
         <div className="flex items-center gap-2 rounded-md border border-sidebar-border bg-sidebar p-2 px-4 shadow">
+          <Search />
           <div className="ml-auto"></div>
           <div className="flex gap-4 rounded-full"></div>
           <UserButton />
