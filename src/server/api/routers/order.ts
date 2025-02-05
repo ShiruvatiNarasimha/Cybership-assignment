@@ -1,8 +1,8 @@
 import { z } from "zod";
-import { createTRPCRouter, publicProcedure } from "../trpc";
+import { createTRPCRouter, protectedProcedure } from "../trpc";
 
 export const orderRouter = createTRPCRouter({
-  createOrder: publicProcedure
+  createOrder: protectedProcedure
     .input(
       z.object({
         name: z.string(),
@@ -11,5 +11,20 @@ export const orderRouter = createTRPCRouter({
         shippingMethod: z.string(),
       }),
     )
-    .mutation(async ({ ctx, input }) => {}),
+    .mutation(async ({ ctx, input }) => {
+      const order = await ctx.db.order.create({
+        data: {
+          name: input.name,
+          address: input.address,
+          items: input.itmes,
+          shippingMethod: input.shippingMethod,
+          userToOrders: {
+            create: {
+              userId: ctx.user.userId!,
+            },
+          },
+        },
+      });
+      return order;
+    }),
 });
