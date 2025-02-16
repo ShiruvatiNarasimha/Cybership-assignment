@@ -119,32 +119,46 @@ export function OrderDataTable() {
 
   return (
     <Card>
-      <div className="w-full p-4">
+      <div className="w-full p-8">
         <div className="flex items-center justify-between py-4">
-          <Input
-            placeholder="Filter by name..."
-            value={(table.getColumn("name")?.getFilterValue() as string) ?? ""}
-            onChange={(event) =>
-              table.getColumn("name")?.setFilterValue(event.target.value)
-            }
-            className="max-w-sm"
-            disabled={isLoading}
-          />
-          <Button variant="outline" className="hover:bg-black hover:text-white">
-            All
-          </Button>
-          <Button variant="outline" className="hover:bg-black hover:text-white">
-            Unfuilled
-          </Button>
-          <Button variant="outline" className="hover:bg-black hover:text-white">
-            Rejected
-          </Button>
-          <Button variant="outline" className="hover:bg-black hover:text-white">
-            Cancellation Requested
-          </Button>
-          <Button variant="outline" className="hover:bg-black hover:text-white">
-            Unshippable
-          </Button>
+          <div className="flex gap-2">
+            <Button
+              variant="outline"
+              className="hover:bg-black hover:text-white"
+            >
+              All
+            </Button>
+            <Button
+              variant="outline"
+              className="hover:bg-black hover:text-white"
+            >
+              Unfulfilled
+            </Button>
+            <Button
+              variant="outline"
+              className="hover:bg-black hover:text-white"
+            >
+              Fulfilled
+            </Button>
+            <Button
+              variant="outline"
+              className="hover:bg-black hover:text-white"
+            >
+              Rejected
+            </Button>
+            <Button
+              variant="outline"
+              className="hover:bg-black hover:text-white"
+            >
+              Cancellation Requested
+            </Button>
+            <Button
+              variant="outline"
+              className="hover:bg-black hover:text-white"
+            >
+              Unshippable
+            </Button>
+          </div>
 
           <DropdownMenu>
             <DropdownMenuTrigger asChild>
