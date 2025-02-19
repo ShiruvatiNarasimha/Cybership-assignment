@@ -11,31 +11,54 @@ export default function Home() {
         <div className="container mx-auto flex h-16 items-center justify-between px-4">
           <div className="flex items-center space-x-2">
             <Box className="h-6 w-6" />
-            <span className="text-xl font-semibold">cybership</span>
+            <span className="text-xl font-semibold text-white">cybership</span>
           </div>
           <nav className="hidden items-center space-x-8 md:flex">
-            <Link href="#" className="text-sm text-gray-300 hover:text-white">
+            <Link
+              href="#"
+              className="text-sm font-medium text-white hover:text-gray-300"
+            >
               Features
             </Link>
-            <Link href="#" className="text-sm text-gray-300 hover:text-white">
+            <Link
+              href="#"
+              className="text-sm font-medium text-white hover:text-gray-300"
+            >
               Integrations
             </Link>
-            <Link href="#" className="text-sm text-gray-300 hover:text-white">
+            <Link
+              href="#"
+              className="text-sm font-medium text-white hover:text-gray-300"
+            >
               Pricing
             </Link>
-            <Link href="#" className="text-sm text-gray-300 hover:text-white">
+            <Link
+              href="#"
+              className="text-sm font-medium text-white hover:text-gray-300"
+            >
               Blog
             </Link>
-            <Link href="#" className="text-sm text-gray-300 hover:text-white">
+            <Link
+              href="#"
+              className="text-sm font-medium text-white hover:text-gray-300"
+            >
               Contact
             </Link>
           </nav>
           <div className="flex items-center space-x-4">
-            <Button variant="ghost" className="text-gray-300 hover:text-white">
-              Sign In
+            <Button
+              variant="ghost"
+              className="text-sm font-medium text-white hover:text-black"
+            >
+              Settings
             </Button>
-            <Button className="bg-white text-black hover:bg-gray-200">
-              Sign Up
+            <Button>
+              <Link
+                href="/dashboard"
+                className="rounded-lg bg-white px-5 py-2 text-sm font-semibold text-black shadow-sm hover:bg-gray-200"
+              >
+                Dashboard
+              </Link>
             </Button>
           </div>
         </div>
@@ -60,7 +83,7 @@ export default function Home() {
             streamline fulfillment, and scale your operations — all at a
             competitive price, tailored for modern logistics.
           </p>
-          <Button className="h-12 rounded-md bg-white px-6 text-black hover:bg-gray-200">
+          <Button className="h-12 rounded-full bg-white px-6 text-black hover:bg-gray-200">
             Get Started Today <ArrowRight className="ml-2 h-4 w-4" />
           </Button>
         </div>
