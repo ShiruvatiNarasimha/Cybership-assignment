@@ -94,19 +94,16 @@ export function AppSidebar() {
                   </SidebarMenuItem>
                 );
               })}
-              <div className="h-2"></div>
-              {open && (
-                <SidebarMenuItem>
-                  <Link href="create">
-                    <Button size="sm" variant={"outline"} className="w-fit">
-                      <Plus />
-                      Create Project
-                    </Button>
-                  </Link>
-                </SidebarMenuItem>
-              )}
             </SidebarMenu>
           </SidebarGroupContent>
+        </SidebarGroup>
+        <SidebarGroup className="mt-4">
+          <Link href="/create-order">
+            <Button size="sm" variant="outline" className="w-fit gap-y-1">
+              <Plus />
+              Create Order
+            </Button>
+          </Link>
         </SidebarGroup>
       </SidebarContent>
     </Sidebar>
