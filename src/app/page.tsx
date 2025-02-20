@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Box, Check } from "lucide-react";
+import Hero from "./_components/hero";
 
 export default function Home() {
   return (
@@ -55,7 +56,7 @@ export default function Home() {
             <Button>
               <Link
                 href="/dashboard"
-                className="rounded-lg bg-white px-5 py-2 text-sm font-semibold text-black shadow-sm hover:bg-gray-200"
+                className="rounded-lg bg-white px-5 py-2 text-sm font-semibold text-black hover:bg-gray-200"
               >
                 Dashboard
               </Link>
@@ -66,28 +67,7 @@ export default function Home() {
 
       {/* Hero Section */}
       <section className="px-4 pb-20 pt-32">
-        <div className="container mx-auto max-w-4xl text-center">
-          <div className="mb-8 inline-flex items-center rounded-full bg-gray-800/50 px-4 py-1">
-            <span className="mr-2 text-blue-400">✦</span>
-            <span className="text-sm">
-              Advanced Capabilities, Priced Right with Cybership →
-            </span>
-          </div>
-          <h1 className="mb-6 text-5xl font-bold tracking-tight md:text-7xl">
-            Supercharging
-            <br />
-            Warehouse Productivity
-          </h1>
-          <p className="mx-auto mb-8 max-w-2xl text-lg text-gray-400 md:text-xl">
-            Cybership delivers powerful WMS solutions that optimize inventory,
-            streamline fulfillment, and scale your operations — all at a
-            competitive price, tailored for modern logistics.
-          </p>
-          <Button className="h-12 rounded-full bg-white px-6 text-black hover:bg-gray-200">
-            Get Started Today <ArrowRight className="ml-2 h-4 w-4" />
-          </Button>
-        </div>
-
+        <Hero />
         {/* Dashboard Preview */}
         <div className="mx-auto mt-20 max-w-6xl">
           <div className="rounded-full">
@@ -232,7 +212,7 @@ export default function Home() {
             feature set designed to revolutionize your logistics. Optimize your
             operations and scale your business effortlessly.
           </p>
-          <Button className="h-12 bg-white px-8 text-black hover:bg-gray-200">
+          <Button className="h-12 rounded-lg bg-white px-8 text-black hover:bg-gray-200">
             Get started
           </Button>
         </div>
