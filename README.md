@@ -1,29 +1,128 @@
-# Create T3 App
+# Cybership.io Clone 🚀
 
-This is a [T3 Stack](https://create.t3.gg/) project bootstrapped with `create-t3-app`.
+An end-to-end clone of **[cybership.io](https://cybership.io)** built from scratch. This project started as an assignment but turned into a passion project as I became deeply interested in warehouse management systems (WMS). The application is designed to optimize inventory management, streamline fulfillment, and scale operations efficiently.
 
-## What's next? How do I make an app with this?
+---
 
-We try to keep this project as simple as possible, so you can start with just the scaffolding we set up for you, and add additional things later when they become necessary.
+## 🌟 Live Demo
 
-If you are not familiar with the different technologies used in this project, please refer to the respective docs. If you still are in the wind, please join our [Discord](https://t3.gg/discord) and ask for help.
+🔗 **[Live Demo Here](https://your-live-demo-link.com)**
 
-- [Next.js](https://nextjs.org)
-- [NextAuth.js](https://next-auth.js.org)
-- [Prisma](https://prisma.io)
-- [Drizzle](https://orm.drizzle.team)
-- [Tailwind CSS](https://tailwindcss.com)
-- [tRPC](https://trpc.io)
+🎥 **Demo Video:** ![Demo Video](https://your-video-link.com)
 
-## Learn More
+🖼️ **Screenshot:**
 
-To learn more about the [T3 Stack](https://create.t3.gg/), take a look at the following resources:
+![Cybership.io Clone Screenshot](./assets/screenshot.png)
 
-- [Documentation](https://create.t3.gg/)
-- [Learn the T3 Stack](https://create.t3.gg/en/faq#what-learning-resources-are-currently-available) — Check out these awesome tutorials
+---
 
-You can check out the [create-t3-app GitHub repository](https://github.com/t3-oss/create-t3-app) — your feedback and contributions are welcome!
+## 🔧 Features
 
-## How do I deploy this?
+- 🚚 Real-time order management dashboard
+- 🏷️ Inventory tracking and optimization
+- 📦 Automated fulfillment processes
+- 📊 Advanced analytics and reporting
+- 🌐 Scalable architecture
+- 🔐 Authentication and authorization
+- ☁️ Deployed on Cloudflare Workers for high performance
 
-Follow our deployment guides for [Vercel](https://create.t3.gg/en/deployment/vercel), [Netlify](https://create.t3.gg/en/deployment/netlify) and [Docker](https://create.t3.gg/en/deployment/docker) for more information.
+---
+
+## 🛠️ Tech Stack
+
+- **Frontend:** React, Next.js, Tailwind CSS
+- **Backend:** Node.js, Express, Prisma
+- **Database:** MongoDB
+- **Deployment:** Vercel, Railway, Cloudflare Workers
+- **Authentication:** Clerk
+- **Other Tools:** Docker, Redis, GitHub Actions
+
+---
+
+## 🚀 Getting Started
+
+### 📁 Clone the Repository
+
+```bash
+git clone https://github.com/yourusername/cybership-clone.git
+cd cybership-clone
+```
+
+### 🏃‍♂️ Run Locally
+
+```bash
+# Install dependencies
+npm install
+
+# Run the development server
+npm run dev
+```
+
+### ⚙️ Environment Variables
+
+Create a `.env` file in the root directory:
+
+```bash
+DATABASE_URL=your_database_url
+NEXT_PUBLIC_CLERK_FRONTEND_API=your_clerk_frontend_api
+CLERK_API_KEY=your_clerk_api_key
+```
+
+---
+
+## 🌐 Deployment
+
+Deployed seamlessly on:
+
+- 🔥 **Vercel** (Frontend)
+- ⚡ **Railway** (Backend)
+- 🌩️ **Cloudflare Workers** (Edge functions)
+
+```bash
+# Deploy on Vercel
+vercel deploy
+```
+
+---
+
+## 💡 Future Enhancements
+
+- 📱 Mobile responsiveness
+- 🧪 Unit and integration testing (Jest, Cypress)
+- ⚡ Performance optimizations
+- 🔄 Real-time updates with WebSocket
+- 🧭 Advanced role-based access control
+
+---
+
+## 🤝 Contributing
+
+Contributions are welcome! To contribute:
+
+1. Fork the repository.
+2. Create a new branch: `git checkout -b feature-name`.
+3. Commit your changes: `git commit -m 'Add some feature'`.
+4. Push to the branch: `git push origin feature-name`.
+5. Submit a pull request.
+
+---
+
+## 📩 Contact
+
+- 💼 **LinkedIn:** [Shiruvati Narasimha](https://www.linkedin.com/in/shiruvati-narasimha-669702296)
+- 💻 **GitHub:** [ShiruvatiNarasimha](https://github.com/ShiruvatiNarasimha)
+- ✉️ **Email:** shiruvati05@gmail.com
+
+---
+
+## 📜 License
+
+This project is licensed under the [MIT License](LICENSE).
+
+---
+
+⭐ **Star** this repo if you like it! ❤️
+
+---
+
+> ⚡ _“Building scalable solutions, one project at a time.”_
