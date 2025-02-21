@@ -6,13 +6,12 @@ An end-to-end clone of **[cybership.io](https://cybership.io)** built from scrat
 
 ## 🌟 Live Demo
 
-🔗 **[Live Demo Here](https://your-live-demo-link.com)**
+🔗 **[Live Demo Here](<https://github.com/ShiruvatiNarasimha/Cybership.io/blob/30774255e66cdc465ae88af81b3ff4b72d29afaa/public/Untitled%20video%20-%20Made%20with%20Clipchamp%20(7).mp4>)**
 
 🎥 **Demo Video:** ![Demo Video](https://your-video-link.com)
 
 🖼️ **Screenshot:**
-
-![Cybership.io Clone Screenshot](./assets/screenshot.png)
+![Alt text](https://github.com/ShiruvatiNarasimha/Cybership.io/blob/30774255e66cdc465ae88af81b3ff4b72d29afaa/public/Screenshot%202025-02-21%20212135.png)
 
 ---
 
