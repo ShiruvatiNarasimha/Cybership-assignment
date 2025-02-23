@@ -13,7 +13,7 @@ import {
   getSortedRowModel,
   useReactTable,
 } from "@tanstack/react-table";
-import { ChevronDown } from "lucide-react";
+import { ChevronDown, Plus } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
 import { Checkbox } from "@/components/ui/checkbox";
@@ -157,6 +157,12 @@ export function OrderDataTable() {
               className="hover:bg-black hover:text-white"
             >
               Unshippable
+            </Button>
+            <Button
+              variant="outline"
+              className="hover:bg-black hover:text-white"
+            >
+              <Plus />
             </Button>
           </div>
 
