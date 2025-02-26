@@ -16,6 +16,7 @@ import {
 import { cn } from "@/lib/utils";
 import {
   Bot,
+  Box,
   CreditCard,
   LayoutDashboard,
   Plus,
@@ -48,12 +49,7 @@ export function AppSidebar() {
       {/* Sidebar Header */}
       <SidebarHeader>
         <div className="flex items-center gap-3 px-2">
-          <Image
-            src="/undraw_cybership.svg"
-            alt="logo"
-            width={60}
-            height={60}
-          />
+          <Box />
           {open && (
             <h1 className="text-xl font-semibold text-primary/90">Cybership</h1>
           )}
@@ -97,14 +93,17 @@ export function AppSidebar() {
             </SidebarMenu>
           </SidebarGroupContent>
         </SidebarGroup>
-        <SidebarGroup className="mt-4">
-          <Link href="/create-order">
-            <Button size="sm" variant="outline" className="w-fit gap-y-1">
-              <Plus />
-              Create Order
-            </Button>
-          </Link>
-        </SidebarGroup>
+        <div className="h-4"></div>
+        {open && (
+          <SidebarGroup className="mt-4 items-center">
+            <Link href="/create-order">
+              <Button size="sm" variant="outline" className="w-fit gap-y-1">
+                <Plus />
+                Create Order
+              </Button>
+            </Link>
+          </SidebarGroup>
+        )}
       </SidebarContent>
     </Sidebar>
   );

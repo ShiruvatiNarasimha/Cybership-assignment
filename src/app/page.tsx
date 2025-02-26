@@ -213,7 +213,7 @@ export default function Home() {
             operations and scale your business effortlessly.
           </p>
           <Button className="h-12 rounded-lg bg-white px-8 text-black hover:bg-gray-200">
-            Get started
+            <Link href={"/dashboard"}>Get started</Link>
           </Button>
         </div>
       </section>
